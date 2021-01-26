@@ -33,10 +33,24 @@ git config --global alias.br branch;
 git config --global alias.co checkout;
 git config --global alias.ci commit;
 git config --global alias.st status;
-git branch *name* - создание новой ветки;
-git checkout *name* - переход на ветку name;
-git checkout -b *name* - создание новой ветки и переход на нее;
+git branch *local_name* - создание новой ветки;
+git checkout *local_name* - переход на ветку name;
+git checkout -b *local_name* - создание новой ветки и переход на нее;
+git checkout -b *local_name* *server*/*remote_branch* - создание новой ветки на основе удаленной ветки и переход на нее;
+
 git merge *branch* - объединение веток (HEAD должна быть на главной ветке);
 git branch -d *name* - удаление ветки;
+(merge commit - когда у коммита несколько предков)
+(fast-forward - перемотка)
+git mergetool - графический интерфейс
+git bracnh -v - показывает последний коммит в каждой ветке
+git push origin *local_branch*:*remote_branch*
+git config --global credential.helper cache (или store) - хранение логина/пароля в кэшэ в течение определенного времени или на диске
+
+
+
+
+
+
 
 
