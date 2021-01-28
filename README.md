@@ -24,32 +24,32 @@ git reset HEAD *file* - отмена индексированного файла
 git checkout -- *file* - возвращает файл к состоянию предыдущего коммита;
 git remote - показывает удаленные сервера;
 git remote -v - показывает удаленные сервера с URL-ссылками;
-git fetch *server* - извлечение данных из удаленного репозитория;
+git fetch *remote_server* - извлечение данных из удаленного репозитория;
 git pull - извлечение данных с ветки и слияние с текущей локальной веткой;
-git push *server* *branch* - указывает ветку, куда пушить;
-git remote show *server* - показывает информацию о конкретном сервере;
+git push *remote_server* *remote_branch* - указывает ветку, куда пушить;
+git push *remote_server* --delete *remote_branch* - удалить ветку на сервере;
+git push *remote_server* *local_branch*:*remote_branch* - запушить локальную ветку в удаленную ветку на удаленный сервер;
+git remote show *remote_server* - показывает информацию о конкретном сервере;
 git config --global alias.*alias* *command* - создание псевдонима alias для команды command;
 git config --global alias.br branch;
 git config --global alias.co checkout;
 git config --global alias.ci commit;
 git config --global alias.st status;
-git branch *local_name* - создание новой ветки;
-git checkout *local_name* - переход на ветку name;
-git checkout -b *local_name* - создание новой ветки и переход на нее;
-git checkout -b *local_name* *server*/*remote_branch* - создание новой ветки на основе удаленной ветки и переход на нее;
-
-git merge *branch* - объединение веток (HEAD должна быть на главной ветке);
+git branch *local_branch* - создание новой ветки;
+git checkout *local_branch* - переход на ветку name;
+git checkout -b *local_branch* - создание новой ветки и переход на нее;
+git checkout -b *local_branch* *remote_server*/*remote_branch* - создание новой ветки на основе удаленной ветки и переход на нее;
+git checkout --track *remote_server*/*remote_branch* - создание новой ветки, отслеживающей удаленную ветку;
+git merge *remote_branch* - объединение веток (HEAD должна быть на главной ветке);
 git branch -d *name* - удаление ветки;
 (merge commit - когда у коммита несколько предков)
 (fast-forward - перемотка)
-git mergetool - графический интерфейс
-git bracnh -v - показывает последний коммит в каждой ветке
-git push origin *local_branch*:*remote_branch*
-git config --global credential.helper cache (или store) - хранение логина/пароля в кэшэ в течение определенного времени или на диске
-
-
-
-
+(tracking branch - ветка наблюдения)
+git mergetool - графический интерфейс;
+git bracnh -v - показывает последний коммит в каждой ветке;
+git config --global credential.helper cache (или store) - хранение логина/пароля в кэшэ в течение определенного времени или на диске;
+git branch -u *remote_server*/*remote_branch* - сопоставить текущую локальную ветку удаленной ветке;
+git branch -vv - список веток наблюдения;
 
 
 
