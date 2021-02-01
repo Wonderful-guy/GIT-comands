@@ -45,12 +45,15 @@ git branch -d *name* - удаление ветки;
 (merge commit - когда у коммита несколько предков)
 (fast-forward - перемотка)
 (tracking branch - ветка наблюдения)
+(rebasing - перемещение)
 git mergetool - графический интерфейс;
 git bracnh -v - показывает последний коммит в каждой ветке;
 git config --global credential.helper cache (или store) - хранение логина/пароля в кэшэ в течение определенного времени или на диске;
 git branch -u *remote_server*/*remote_branch* - сопоставить текущую локальную ветку удаленной ветке;
 git branch -vv - список веток наблюдения;
-
+git rebase *local_branch* - переместить изменения текущей ветки в конец указанной ветки
+git rebase *local_branch_1* *local_branch_2* - переключает на 2ую ветку и воспроизводит ее содержимое в 1ой ветке
+git rebase --onto *local_branch_1* *local_branch_2* *local_branch_3* - переместить изменения 3 ветки в 1ую
 
 
 
